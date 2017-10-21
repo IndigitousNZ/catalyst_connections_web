@@ -1,10 +1,10 @@
-<md-toolbar>
-  <div class="md-toolbar-tools search-bar">
+<md-toolbar class="md-accent">
+  <div class="md-toolbar-tools">
     <md-button class="md-icon-button" ui-sref="points">
       <md-icon>arrow_back</md-icon>
     </md-button>
     <md-input-container flex>
-      <input ng-model="$ctrl.address" ng-change="$ctrl.lookupAddress()" ng-model-options="{ debounce: 200 }">
+      <input ng-model="$ctrl.address" ng-change="$ctrl.lookupAddress()" ng-model-options="{ debounce: 200 }" placeholder="Workplace Address">
     </md-input-container>
     <md-button class="md-icon-button" ng-click="ctrl.lookupAddress()">
       <md-icon>search</md-icon>

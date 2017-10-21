@@ -1,18 +1,18 @@
 class ProfileController {
   constructor(
     $state,
-    users
+    user
   ) {
     this.$state = $state;
-    this.users = users;
+    this.user = user;
   }
 
   $onInit() {
-    this.users.load(true);
+    this.user.load(true);
   }
 
   save() {
-    this.users.updateUser(this.users.data).then((data) => {
+    this.user.updateUser(this.user.data).then((data) => {
       this.$state.go('points');
     });
   }

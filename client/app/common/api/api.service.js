@@ -43,6 +43,12 @@ class Api {
       });
     }
 
+    logout() {
+      return this.facebook.logout().then((accessToken) => {
+        this.$window.localStorage.removeItem('accessToken');
+      });
+    }
+
     getAccessToken(accessToken) {
       return this.$http.post('https://catalyst-connections-api.herokuapp.com/oauth/token', {
         client_id: '1097aa8c036d1e61dffb20641f31d26f6f5775e826bd88fe6b1de3d82fc824f3',

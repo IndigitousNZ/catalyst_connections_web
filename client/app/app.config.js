@@ -3,13 +3,19 @@ import ApolloClient, { createNetworkInterface } from 'apollo-client';
 
 /* @ngInject*/
 export default function appConfig(
-  apolloProvider, $stateProvider, $locationProvider, $windowProvider
+  apolloProvider, $stateProvider, $locationProvider, $windowProvider, $mdThemingProvider
 ) {
   const $window = $windowProvider.$get();
   $locationProvider.html5Mode({
     enabled: true,
     rewriteLinks: false
   }).hashPrefix('!');
+
+  $mdThemingProvider.theme('default')
+    .primaryPalette('indigo')
+    .accentPalette('grey', {
+      'default': '200'
+    });
 
   const networkInterface = createNetworkInterface({
     uri: 'https://catalyst-connections-api.herokuapp.com/graphql'

@@ -1,14 +1,14 @@
 class ItemController {
   constructor(
     $state,
-    users
+    user
   ) {
     this.$state = $state;
-    this.users = users;
+    this.user = user;
   }
 
   save() {
-    this.users.updatePoint(this.item).then(() => {
+    this.user.updatePoint(this.item).then(() => {
       this.$state.go('points');
     });
   }

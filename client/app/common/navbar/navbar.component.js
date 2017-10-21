@@ -1,8 +1,17 @@
 class NavbarController {
   constructor(
+    $state,
+    api
   ) {
+    this.$state = $state;
+    this.api = api;
   }
-  $onInit() {
+
+  logout() {
+    console.log('test');
+    this.api.logout().then(() => {
+      this.$state.go('login');
+    });
   }
 }
 

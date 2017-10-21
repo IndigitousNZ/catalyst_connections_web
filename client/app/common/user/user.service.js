@@ -1,7 +1,7 @@
 import angular from 'angular';
 import gql from 'graphql-tag';
 
-class Users {
+class User {
     constructor(api) {
       this.api = api;
     }
@@ -99,5 +99,5 @@ class Users {
 }
 
 
-export default angular.module('app.common.users.service', [
-]).service('users', Users).name;
+export default angular.module('app.common.user.service', [
+]).service('user', User).name;

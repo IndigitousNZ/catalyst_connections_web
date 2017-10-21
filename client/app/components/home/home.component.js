@@ -7,8 +7,8 @@ let Home = {
   controller: HomeController
 };
 
-import users from 'common/users/users.service';
+import user from 'common/user/user.service';
 
 export default angular.module('app.components.home.component', [
-  users
+  user
 ]).component('home', Home).name;
