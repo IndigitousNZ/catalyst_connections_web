@@ -9,7 +9,7 @@ import appRun from './app.run';
 import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
-import 'ngMap';
+import 'ngmap';
 
 angular.module('app', [
     AngularApollo,
