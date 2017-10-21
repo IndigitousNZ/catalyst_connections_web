@@ -13,7 +13,8 @@ class Api {
 
     query(gql) {
       return this.apollo.query({
-        query: gql
+        query: gql,
+        fetchPolicy: 'network-only'
       }).then((data) => {
         this.$log.log(gql, data.data);
         return data.data;

@@ -91,8 +91,9 @@ class User {
           }
         }
       `, point).then((data) => {
-        this.data.point = data.updatePointMutation.point;
-        return this.data.point;
+        return this.load(true).then(() => {
+          return this.data.point;
+        });
       });
     }
 

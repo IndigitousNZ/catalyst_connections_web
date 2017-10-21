@@ -8,11 +8,13 @@ class UserController {
   }
 
   $onInit() {
-    this.user.load(true);
+    this.user.load(true).then((data) => {
+      this.userCopy = angular.copy(data);
+    });
   }
 
   save() {
-    this.user.updateUser(this.user.data).then((data) => {
+    this.user.updateUser(this.userCopy).then((data) => {
       this.$state.go('points');
     });
   }
@@ -28,5 +30,8 @@ let User = {
   controller: UserController
 };
 
+import user from './user.service';
+
 export default angular.module('app.components.user.component', [
+  user
 ]).component('user', User).name;

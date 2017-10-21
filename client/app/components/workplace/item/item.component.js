@@ -9,7 +9,7 @@ class ItemController {
 
   save() {
     this.user.updatePoint(this.item).then(() => {
-      this.$state.go('points');
+      this.$state.go('user');
     });
   }
 }
