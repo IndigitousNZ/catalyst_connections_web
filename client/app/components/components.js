@@ -1,12 +1,15 @@
-import angular from 'angular';
-import Home from './home/home';
-import About from './about/about';
+import Home from './home/home.component';
+import Login from './login/login.component';
+import Points from './points/index.module';
+import Profile from './profile/profile.component';
+import Root from './root/root.component';
+import Workplace from './workplace/index.module';
 
-let componentModule = angular.module('app.components', [
+export default angular.module('app.components', [
   Home,
-  About
-])
-
-.name;
-
-export default componentModule;
+  Login,
+  Points,
+  Profile,
+  Root,
+  Workplace
+]).name;

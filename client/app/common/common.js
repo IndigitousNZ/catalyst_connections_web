@@ -1,14 +1,14 @@
 import angular from 'angular';
-import Navbar from './navbar/navbar';
-import Hero from './hero/hero';
-import User from './user/user';
+import Api from './api/api.service';
+import Facebook from './facebook/facebook.service';
+import Navbar from './navbar/navbar.component';
+import Points from './points/points.service';
+import Users from './users/users.service';
 
-let commonModule = angular.module('app.common', [
+export default angular.module('app.common', [
+  Api,
+  Facebook,
   Navbar,
-  Hero,
-  User
-])
-  
-.name;
-
-export default commonModule;
+  Points,
+  Users
+]).name;

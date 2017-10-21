@@ -1,0 +1,7 @@
+<md-list-item class="md-3-line" ng-click="$ctrl.go()">
+  <img ng-src="{{$ctrl.item.resource.avatar_url}}" class="md-avatar" />
+  <div class="md-list-item-text" layout="column">
+    <h3>{{ $ctrl.item.resource.first_name }} {{ $ctrl.item.resource.last_name }}</h3>
+    <h4>{{ $ctrl.item.address_line_1 }}, {{ $ctrl.item.city }}</h4>
+  </div>
+</md-list-item>

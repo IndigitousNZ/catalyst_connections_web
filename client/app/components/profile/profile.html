@@ -1,0 +1,23 @@
+<md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" ui-sref="points">
+      <md-icon>arrow_back</md-icon>
+    </md-button>
+    <h2 flex md-truncate>My Profile</h2>
+  </div>
+</md-toolbar>
+
+<img ng-src="{{$ctrl.users.data.avatar_url}}" class="md-avatar">
+<div>
+  <md-input-container class="md-block">
+    <label>First Name</label>
+    <input ng-model="$ctrl.users.data.first_name">
+  </md-input-container>
+
+  <md-input-container class="md-block">
+    <label>Last Name</label>
+    <input ng-model="$ctrl.users.data.last_name">
+  </md-input-container>
+
+  <md-button type="submit" ng-click="$ctrl.save()">Submit</md-button>
+</div>

@@ -5,7 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.5",
+    "angular-messages": "^1.6.6",
     "angular-ui-router": "^1.0.0-beta.1",
+    "angular1-apollo": "^0.3.0",
+    "apollo-client": "^1.9.3",
+    "graphql-tag": "^2.5.0",
+    "ngmap": "^1.18.4",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
@@ -36,7 +44,7 @@
     "karma-mocha-reporter": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.1",
-    "lodash": "^4.11.1",
+    "lodash": "^4.17.4",
     "mocha": "^2.3.0",
     "ng-annotate-loader": "0.0.10",
     "node-libs-browser": "^0.5.0",

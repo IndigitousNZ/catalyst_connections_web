@@ -1,11 +1,16 @@
-import template from './navbar.html';
-import controller from './navbar.controller';
-import './navbar.scss';
+class NavbarController {
+  constructor(
+  ) {
+  }
+  $onInit() {
+  }
+}
 
-let navbarComponent = {
+let Navbar = {
   bindings: {},
-  template,
-  controller
+  template: require('./navbar.html'),
+  controller: NavbarController
 };
 
-export default navbarComponent;
+export default angular.module('app.common.navbar.component', [
+]).component('navbar', Navbar).name;

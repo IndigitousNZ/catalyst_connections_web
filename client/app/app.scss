@@ -1,7 +1,2 @@
-@import "common/common";
-
-.app {
-  height: 100%;
-  background-color: $lightBgColor;
-}
-
+@import 'node_modules/angular-material/angular-material.scss';
+@import 'components/workplace/workplace';

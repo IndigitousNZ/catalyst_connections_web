@@ -1,8 +1,28 @@
-<nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
+<md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+    <h2 flex md-truncate>Catalyst Connections</h2>
+    <md-menu md-position-mode="target-right target">
+     <md-button aria-label="Open menu" class="md-icon-button" ng-click="$mdMenu.open($event)">
+       <md-icon>more_vert</md-icon>
+     </md-button>
+     <md-menu-content width="4">
+       <md-menu-item>
+         <md-button ui-sref="profile">
+           My Profile
+         </md-button>
+       </md-menu-item>
+       <md-menu-item>
+         <md-button ui-sref="workplace">
+           Update My Workplace
+         </md-button>
+       </md-menu-item>
+       <md-menu-divider></md-menu-divider>
+       <md-menu-item>
+         <md-button ui-sref="logout">
+           Log Out
+         </md-button>
+       </md-menu-item>
+     </md-menu-content>
+   </md-menu>
   </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
-  </div>
-</nav>
+</md-toolbar>

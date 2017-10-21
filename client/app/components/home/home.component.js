@@ -1,11 +1,14 @@
-import template from './home.html';
-import controller from './home.controller';
-import './home.scss';
+class HomeController {
+}
 
-let homeComponent = {
+let Home = {
   bindings: {},
-  template,
-  controller
+  template: require('./home.html'),
+  controller: HomeController
 };
 
-export default homeComponent;
+import users from 'common/users/users.service';
+
+export default angular.module('app.components.home.component', [
+  users
+]).component('home', Home).name;

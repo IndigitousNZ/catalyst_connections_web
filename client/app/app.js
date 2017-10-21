@@ -3,18 +3,22 @@ import uiRouter from 'angular-ui-router';
 import Common from './common/common';
 import Components from './components/components';
 import AppComponent from './app.component';
-import 'normalize.css';
+import AngularApollo from 'angular1-apollo';
+import appConfig from './app.config';
+import appRun from './app.run';
+import 'angular-animate';
+import 'angular-aria';
+import 'angular-material';
+import 'ngMap';
 
 angular.module('app', [
+    AngularApollo,
     uiRouter,
     Common,
-    Components
+    Components,
+    'ngMap',
+    'ngMaterial'
   ])
-  .config(($locationProvider) => {
-    "ngInject";
-    // @see: https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions
-    // #how-to-configure-your-server-to-work-with-html5mode
-    $locationProvider.html5Mode(true).hashPrefix('!');
-  })
-
+  .config(appConfig)
+  .run(appRun)
   .component('app', AppComponent);
