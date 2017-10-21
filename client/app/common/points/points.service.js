@@ -1,4 +1,3 @@
-import angular from 'angular';
 import gql from 'graphql-tag';
 import map from 'lodash/fp/map';
 

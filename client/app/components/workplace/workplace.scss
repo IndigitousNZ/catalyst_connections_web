@@ -1,6 +1,4 @@
 workplace {
-  .search-bar { background-color: #222; }
-  .search-bar * { color: white !important; }
-  .search-bar input { border-bottom-color: white; }
+  .md-input-focused label, .md-input-has-value label { display: none; }
   .md-errors-spacer { display:none; }
 }

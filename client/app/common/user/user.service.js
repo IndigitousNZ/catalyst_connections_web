@@ -1,4 +1,3 @@
-import angular from 'angular';
 import gql from 'graphql-tag';
 
 class User {
