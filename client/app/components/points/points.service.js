@@ -45,5 +45,5 @@ class Points {
 }
 
 
-export default angular.module('app.common.points.service', [
+export default angular.module('app.components.points.service', [
 ]).service('points', Points).name;

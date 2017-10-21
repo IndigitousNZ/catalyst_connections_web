@@ -21,7 +21,6 @@ class Api {
     }
 
     mutate(gql, variables) {
-      console.log(variables);
       return this.apollo.mutate({
         mutation: gql,
         variables: variables

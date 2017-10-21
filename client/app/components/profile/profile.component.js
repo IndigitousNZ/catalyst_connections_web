@@ -16,6 +16,11 @@ class ProfileController {
       this.$state.go('points');
     });
   }
+
+  workplace() {
+    alert('lol');
+    this.$state.go('workplace');
+  }
 }
 
 let Profile = {

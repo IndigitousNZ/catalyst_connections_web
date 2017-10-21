@@ -39,6 +39,21 @@ export default class Routes {
             title: 'Login',
             url: '/',
             component: 'login',
+        }).state({
+            name: 'logout',
+            title: 'Logout',
+            url: '/logout',
+            onEnter: logout
         })
     }
+}
+
+/* @ngInject*/
+function logout(
+    $state,
+    api
+) {
+    api.logout().then(() => {
+      $state.go('login');
+    });
 }

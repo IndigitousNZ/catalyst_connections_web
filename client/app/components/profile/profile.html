@@ -13,10 +13,15 @@
       <label>First Name</label>
       <input ng-model="$ctrl.user.data.first_name">
     </md-input-container>
-
     <md-input-container class="md-block" flex-gt-sm>
       <label>Last Name</label>
       <input ng-model="$ctrl.user.data.last_name">
+    </md-input-container>
+  </div>
+  <div layout-gt-sm="row">
+    <md-input-container class="md-block" flex-gt-sm>
+      <label>Workplace Address</label>
+      <input ng-model="$ctrl.user.data.point.address_line_1" ng-focus="alert('lol')">
     </md-input-container>
   </div>
   <md-button type="submit" ng-click="$ctrl.save()">Submit</md-button>
