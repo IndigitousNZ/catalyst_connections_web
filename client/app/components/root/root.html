@@ -1,4 +1,2 @@
-<navbar ng-if="$ctrl.$stateParams.navbar !== false"></navbar>
-<main>
-  <ui-view ng-if="$ctrl.authenticated"></ui-view>
-</main>
+<navbar ng-if="$ctrl.$stateParams.navbar !== false && !$ctrl.loading"></navbar>
+<ui-view></ui-view>

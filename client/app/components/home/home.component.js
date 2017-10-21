@@ -1,4 +1,24 @@
 class HomeController {
+  constructor(
+    $state,
+    user
+  ) {
+    this.$state = $state;
+    this.user = user;
+
+    this.loading = false;
+  }
+  $onInit() {
+    this.loading = true;
+    this.user.load(true).then((user) => {
+      this.loading = false;
+      if(user.point) {
+        this.$state.go('points');
+      } else {
+        this.$state.go('profile');
+      };
+    });
+  }
 }
 
 let Home = {

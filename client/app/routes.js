@@ -37,7 +37,7 @@ export default class Routes {
         }).state({
             name: 'login',
             title: 'Login',
-            url: '/',
+            url: '/login',
             component: 'login',
         }).state({
             name: 'logout',
@@ -51,9 +51,9 @@ export default class Routes {
 /* @ngInject*/
 function logout(
     $state,
-    api
+    user
 ) {
-    api.logout().then(() => {
+    user.logout().then(() => {
       $state.go('login');
     });
 }

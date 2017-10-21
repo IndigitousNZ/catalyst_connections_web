@@ -12,7 +12,7 @@ export default function appConfig(
   }).hashPrefix('!');
 
   $mdThemingProvider.theme('default')
-    .primaryPalette('indigo')
+    .primaryPalette('teal')
     .accentPalette('grey', {
       'default': '200'
     });

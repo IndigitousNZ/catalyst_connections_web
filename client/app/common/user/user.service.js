@@ -95,6 +95,12 @@ class User {
         return this.data.point;
       });
     }
+
+    logout() {
+      return this.api.logout().then(() => {
+        this.data = null;
+      })
+    }
 }
 
 

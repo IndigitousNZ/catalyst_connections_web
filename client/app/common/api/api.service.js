@@ -31,8 +31,12 @@ class Api {
     }
 
     authenticate() {
-      return this.facebook.authenticate().then((accessToken) => {
-        return this.getAccessToken(accessToken);
+      return new Promise((resolve, reject) => {
+        if (this.$window.localStorage.getItem('accessToken')) {
+          resolve();
+        } else {
+          reject();
+        }
       });
     }
 

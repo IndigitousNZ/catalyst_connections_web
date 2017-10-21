@@ -18,7 +18,6 @@ class ProfileController {
   }
 
   workplace() {
-    alert('lol');
     this.$state.go('workplace');
   }
 }
