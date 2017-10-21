@@ -11,10 +11,10 @@ export default class Routes {
             component: 'home',
             parent: 'root'
         }).state({
-            name: 'profile',
-            title: 'Profile',
-            url: '/profile',
-            component: 'profile',
+            name: 'user',
+            title: 'User',
+            url: '/user',
+            component: 'user',
             parent: 'root',
             params: {
               navbar: false

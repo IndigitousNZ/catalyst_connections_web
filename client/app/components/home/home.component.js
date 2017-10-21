@@ -15,7 +15,7 @@ class HomeController {
       if(user.point) {
         this.$state.go('points');
       } else {
-        this.$state.go('profile');
+        this.$state.go('user');
       };
     });
   }
@@ -27,7 +27,7 @@ let Home = {
   controller: HomeController
 };
 
-import user from 'common/user/user.service';
+import user from 'components/user/user.service';
 
 export default angular.module('app.components.home.component', [
   user

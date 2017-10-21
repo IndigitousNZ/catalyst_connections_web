@@ -104,5 +104,5 @@ class User {
 }
 
 
-export default angular.module('app.common.user.service', [
+export default angular.module('app.components.user.service', [
 ]).service('user', User).name;

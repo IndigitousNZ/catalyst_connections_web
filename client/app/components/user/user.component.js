@@ -1,4 +1,4 @@
-class ProfileController {
+class UserController {
   constructor(
     $state,
     user
@@ -22,11 +22,11 @@ class ProfileController {
   }
 }
 
-let Profile = {
+let User = {
   bindings: {},
-  template: require('./profile.html'),
-  controller: ProfileController
+  template: require('./user.html'),
+  controller: UserController
 };
 
-export default angular.module('app.components.profile.component', [
-]).component('profile', Profile).name;
+export default angular.module('app.components.user.component', [
+]).component('user', User).name;

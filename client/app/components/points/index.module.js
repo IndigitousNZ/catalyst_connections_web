@@ -1,9 +1,9 @@
-import Points from './points.component';
-import Item from './item/item.component';
+import Component from './points.component';
 import Service from './points.service';
+import Item from './item/item.component';
 
 export default angular.module('app.components.points', [
-  Points,
-  Item,
-  Service
+  Component,
+  Service,
+  Item
 ]).name
